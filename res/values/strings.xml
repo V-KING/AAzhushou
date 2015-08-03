@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">设置</string>
+    <string name="app_name">AA助手</string>
+    <string name="tvTopTittle">AA费用小助手</string>
+    <string name="wellcomeInfo">欢迎使用AA小助手</string>
+
+</resources>
