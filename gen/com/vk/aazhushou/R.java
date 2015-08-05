@@ -27,30 +27,47 @@ public final class R {
         public static final int bg_main1=0x7f020000;
         public static final int bg_tittle=0x7f020001;
         public static final int bt_box=0x7f020002;
-        public static final int ic_launcher=0x7f020003;
-        public static final int th_ewallet237=0x7f020004;
-        public static final int th_skippylite=0x7f020005;
+        public static final int grid1=0x7f020003;
+        public static final int grid2=0x7f020004;
+        public static final int grid3=0x7f020005;
+        public static final int grid4=0x7f020006;
+        public static final int grid5=0x7f020007;
+        public static final int grid6=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int th_ewallet237=0x7f02000a;
+        public static final int th_skippylite=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f050007;
+        public static final int action_settings=0x7f05000a;
+        public static final int gvAppGrid=0x7f050006;
         public static final int includeBottom=0x7f050004;
         public static final int includeTittle=0x7f050003;
         public static final int ivBottomLeft=0x7f050001;
         public static final int ivBottomRight=0x7f050002;
+        public static final int ivIcon=0x7f050007;
         public static final int layMainBody=0x7f050005;
         public static final int tvBottomText=0x7f050000;
-        public static final int tvTopTittle=0x7f050006;
+        public static final int tvName=0x7f050008;
+        public static final int tvTopTittle=0x7f050009;
     }
     public static final class layout {
         public static final int bottom_box=0x7f030000;
         public static final int lay_main=0x7f030001;
-        public static final int top_tittle=0x7f030002;
+        public static final int main_body=0x7f030002;
+        public static final int main_body_item=0x7f030003;
+        public static final int top_tittle=0x7f030004;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f060000;
+        public static final int appGridTextAccountManage=0x7f060006;
+        public static final int appGridTextGategoryManage=0x7f060008;
+        public static final int appGridTextQueryConsume=0x7f060005;
+        public static final int appGridTextRecordConsume=0x7f060004;
+        public static final int appGridTextStatisticsManage=0x7f060007;
+        public static final int appGridTextUserManage=0x7f060009;
         public static final int app_name=0x7f060001;
         public static final int tvTopTittle=0x7f060002;
         public static final int wellcomeInfo=0x7f060003;

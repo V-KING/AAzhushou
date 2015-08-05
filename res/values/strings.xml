@@ -6,4 +6,10 @@
     <string name="tvTopTittle">AA费用小助手</string>
     <string name="wellcomeInfo">欢迎使用AA小助手</string>
 
+    <string name="appGridTextRecordConsume">记录消费</string>
+    <string name="appGridTextQueryConsume">查询消费</string>
+    <string name="appGridTextAccountManage">账本管理</string>
+    <string name="appGridTextStatisticsManage">统计管理</string>
+    <string name="appGridTextGategoryManage">类别管理</string>
+    <string name="appGridTextUserManage">人员管理</string>
 </resources>

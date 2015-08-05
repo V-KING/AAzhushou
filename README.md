@@ -1,8 +1,35 @@
-# AAzhushou
-aaåŠ©æ‰‹
-# 20150805
-## 1. ç›¸å¯¹å¸ƒå±€çš„æ—¶å€™æ³¨æ„bottom_box.xmlçš„layout_alignParentBottom
-## 2. å®ç°Acitityçš„Baseç±»ï¼Œä»¥åå¯ä»¥å¾€åŸºç±»ä¸­æ·»åŠ å†…å®¹
-## 3. **å®ç°AcitivityFrameç±»**
-- è¦ä¸è¦æ ‡é¢˜requestWindowFeature(Window.FEATURE_NO_TITLE);
-- åŠ¨æ€å°†å…¶ä»–id(æ¯”å¦‚å›¾ç‰‡id)çš„itemåŠ è½½layMainBodyä¸­åˆ°
+#AAzhushou
+
+aaÖúÊÖ
+
+##20150805
+
+### 1. Ïà¶Ô²¼¾ÖµÄÊ±ºò×¢Òâbottom_box.xmlµÄlayout_alignParentBottom
+### 2. ÊµÏÖAcitityµÄBaseÀà£¬ÒÔºó¿ÉÒÔÍù»ùÀàÖĞÌí¼ÓÄÚÈİ
+### 3. ÊµÏÖAcitivityFrameÀà
+
+- Òª²»Òª±êÌârequestWindowFeature(Window.FEATURE_NO_TITLE);
+- ¶¯Ì¬½«ÆäËûid(±ÈÈçÍ¼Æ¬id)µÄitem¼ÓÔØlayMainBodyÖĞµ½
+
+##20150806
+### 1. ½«main_body.xml½¨Á¢,ÀïÃæÓĞGridView
+### 2. ¼ÈÈ»ÓĞÁËGridViewÎÒÃÇ¾ÍÒª¶¯Ì¬µÄ¼ÓÔØÀïÃæµÄitem£¬ËùÒÔÏÂĞèÒªbindÒ»¸öAdapterAppGrid,ĞÂ½¨AdapterAppGridÀà
+### 3. ĞèÒªÒ»¸ö×°itemµÄlayout
+### 4. ÔÚBaseAdapterÖĞ·â×°Ò»¸öHolderÀà×°ivºÍtvµÄÊµÌåÀà,¿´ÆğÀ´ÇåË¬
+- ËùÓÃµ½µÄ×ÊÔ´·â×°µ½Ò»¸öIntegerÊı×ém_ImageIntegerÖĞ(×ÊÔ´id)
+- ½«ËùÓĞµÄivIconµÄnameËùÓÃµ½µÄ×Ö·û´®Ò²·â×°µ½Ò»¸öÊı×ém_ImageStringÖĞ
+- ×¢Òâ£º·â×°m_ImageStringµÄÊ±ºò£¬·â×°ÔÚ¹¹Ôìº¯ÊıÀï£¬ÒòÎª»ñµÃstringµÄÊ±ºòÊÇÒªÓÃµ½·½·¨µÄ
+
+### 5. ¸´Ğ´AdapterAppGridÀïÃæµÄ·½·¨
+Ë¼Â·£ºÈç¹ûÃ»ÓĞconvertView¾Í´´½¨Ò»×éview£¨ivºÍtv£©£¬ÓĞ¾ÍÖ±½Ó»ñµÃ<×éitems>²¢ÉèÖÃ×ÊÔ´.
+¿ÉÒÔ²Î¿¼£ºhttp://www.cnblogs.com/andriod-html5/archive/2012/06/06/2539221.html
+- ÖØµã¸´Ğ´getView(int position, View convertView, ViewGroup parent)·½·¨
+- ÔõÃ´»ñÈ¡(¹ıÂË)Ò»¸ölayout»òÕßView? 
+	- LayoutInflater _layoutInflater = LayoutInflater.from(mContext);
+	- convertView = _layoutInflater .inflate(R.layout.main_body_item, null);
+- convertView.setTag(Object)//¿ÉÒÔÉèÖÃÒ»¸öTagÀïÃæ¿ÉÒÔ·ÅObjectÊµÌå£¬¿ÉÒÔÔÚÍâÃæ»ñÈ¡Õâ¸öObject
+### 6. ³õÊ¼»¯µÄÒ»Ğ©·â×°
+- initVariable()
+- initView()
+- initListeners()
+- bindData()//ÀıÈç£ºAdapter
