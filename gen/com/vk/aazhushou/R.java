@@ -24,43 +24,52 @@ public final class R {
         public static final int topTittle_horizontal_padding=0x7f040003;
     }
     public static final class drawable {
-        public static final int bg_main1=0x7f020000;
-        public static final int bg_tittle=0x7f020001;
-        public static final int bt_box=0x7f020002;
-        public static final int grid1=0x7f020003;
-        public static final int grid2=0x7f020004;
-        public static final int grid3=0x7f020005;
-        public static final int grid4=0x7f020006;
-        public static final int grid5=0x7f020007;
-        public static final int grid6=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int th_ewallet237=0x7f02000a;
-        public static final int th_skippylite=0x7f02000b;
+        public static final int app_grid_selector=0x7f020000;
+        public static final int bg_main1=0x7f020001;
+        public static final int bg_tittle=0x7f020002;
+        public static final int bt_box=0x7f020003;
+        public static final int buddy=0x7f020004;
+        public static final int grid1=0x7f020005;
+        public static final int grid2=0x7f020006;
+        public static final int grid3=0x7f020007;
+        public static final int grid4=0x7f020008;
+        public static final int grid5=0x7f020009;
+        public static final int grid6=0x7f02000a;
+        public static final int ic_launcher=0x7f02000b;
+        public static final int th_ewallet237=0x7f02000c;
+        public static final int th_skippylite=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f05000a;
-        public static final int gvAppGrid=0x7f050006;
-        public static final int includeBottom=0x7f050004;
-        public static final int includeTittle=0x7f050003;
-        public static final int ivBottomLeft=0x7f050001;
-        public static final int ivBottomRight=0x7f050002;
-        public static final int ivIcon=0x7f050007;
-        public static final int layMainBody=0x7f050005;
+        public static final int action_settings=0x7f05000e;
+        public static final int gvAppGrid=0x7f050009;
+        public static final int includeBottom=0x7f050007;
+        public static final int includeTittle=0x7f050006;
+        public static final int ivBottomLeft=0x7f050002;
+        public static final int ivBottomRight=0x7f050003;
+        public static final int ivIcon=0x7f05000a;
+        public static final int ivMenuName=0x7f05000c;
+        public static final int layBottomBar=0x7f050001;
+        public static final int layBottomListViewBox=0x7f050004;
+        public static final int layMainBody=0x7f050008;
+        public static final int lvSlideList=0x7f050005;
         public static final int tvBottomText=0x7f050000;
-        public static final int tvName=0x7f050008;
-        public static final int tvTopTittle=0x7f050009;
+        public static final int tvName=0x7f05000b;
+        public static final int tvTopTittle=0x7f05000d;
     }
     public static final class layout {
         public static final int bottom_box=0x7f030000;
         public static final int lay_main=0x7f030001;
         public static final int main_body=0x7f030002;
         public static final int main_body_item=0x7f030003;
-        public static final int top_tittle=0x7f030004;
+        public static final int slidemenu_list_item=0x7f030004;
+        public static final int top_tittle=0x7f030005;
     }
     public static final class menu {
         public static final int activity_main=0x7f080000;
     }
     public static final class string {
+        public static final int SlideMenuStirng1=0x7f06000a;
+        public static final int SlideMenuStirng2=0x7f06000b;
         public static final int action_settings=0x7f060000;
         public static final int appGridTextAccountManage=0x7f060006;
         public static final int appGridTextGategoryManage=0x7f060008;
@@ -76,11 +85,13 @@ public final class R {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -99,5 +110,8 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        /**   <item name="android:cacheColorHint">@drawable/ic_launcher</item>  
+         */
+        public static final int StyleListView=0x7f070002;
     }
 }

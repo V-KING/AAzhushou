@@ -2,8 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="37dp"
-    android:background="@drawable/bg_tittle" 
-    android:layout_marginBottom="@dimen/activity_vertical_margin">
+    android:background="@drawable/bg_tittle" >
 
     <TextView
         android:id="@+id/tvTopTittle"

@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="68dp"
+    android:layout_height="68px"
     android:layout_alignParentBottom="true"
+    android:layout_gravity="center_vertical"
     android:background="@drawable/bt_box" >
 
-    <ImageView
-        android:id="@+id/ivBottomLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:src="@drawable/th_ewallet237" />
+    <RelativeLayout
+        android:id="@+id/layBottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="68px" >
 
-    <TextView
-        android:id="@id/tvBottomText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/ivBottomLeft"
-        android:paddingLeft="@dimen/bottome_horizontal_padding"
-        android:paddingRight="@dimen/bottome_horizontal_padding"
-        android:text="@string/wellcomeInfo" />
+        <ImageView
+            android:id="@+id/ivBottomLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/th_ewallet237" />
 
-    <ImageView
-        android:id="@+id/ivBottomRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:src="@drawable/th_skippylite" />
+        <TextView
+            android:id="@id/tvBottomText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ivBottomLeft"
+            android:paddingLeft="@dimen/bottome_horizontal_padding"
+            android:paddingRight="@dimen/bottome_horizontal_padding"
+            android:text="@string/wellcomeInfo" />
+
+        <ImageView
+            android:id="@+id/ivBottomRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/th_skippylite" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layBottomListViewBox"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layBottomBar" >
+
+        <ListView
+            android:id="@+id/lvSlideList"
+            style="@style/StyleListView" />
+    </LinearLayout>
 
 </RelativeLayout>
