@@ -4,8 +4,6 @@
 
 aa助手
 
-
-
 ##20150805
 
 ### 1. 相对布局的时候注意bottom_box.xml的layout_alignParentBottom
