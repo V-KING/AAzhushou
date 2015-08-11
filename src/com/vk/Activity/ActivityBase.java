@@ -1,4 +1,4 @@
-package com.vk.Base;
+package com.vk.Activity;
 
 import android.app.Activity;
 import android.content.Intent;

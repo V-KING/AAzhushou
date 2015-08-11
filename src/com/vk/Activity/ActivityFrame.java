@@ -1,4 +1,4 @@
-package com.vk.Base;
+package com.vk.Activity;
 
 import com.vk.aazhushou.R;
 
@@ -17,7 +17,7 @@ public class ActivityFrame extends ActivityBase {
 		setContentView(R.layout.lay_main);
 	}
 	/**
-	 * 动态将其他id(比如图片id)的item加载layMainBody中到
+	 * 动态将其他的layout(main_body.xml)加载id=layMainBody的视图中
 	 * @param pResId	要加载的相对布局的include的layout的id
 	 */
 	protected void appendMainBody(int pResId) {

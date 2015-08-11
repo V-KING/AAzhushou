@@ -12,4 +12,7 @@
     <string name="appGridTextStatisticsManage">统计管理</string>
     <string name="appGridTextGategoryManage">类别管理</string>
     <string name="appGridTextUserManage">人员管理</string>
+    
+    <string name="SlideMenuStirng1">帮助</string>
+    <string name="SlideMenuStirng2">软件更新</string>
 </resources>
