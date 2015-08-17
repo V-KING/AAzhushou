@@ -36,7 +36,8 @@ public class AdapterSlideMenu extends AdapterBase{
 		// TODO Auto-generated method stub
 		Holder _Holder; 
 		if (convertView == null) {
-			convertView = getLayoutInflater().inflate(R.id.layBottomListViewBox, null);
+//			convertView = getLayoutInflater().inflate(R.id.layBottomListViewBox, null);
+			convertView = getLayoutInflater().inflate(R.layout.slidemenu_list_item, null);
 			_Holder = new Holder();
 			_Holder.tvMenuName = (TextView) convertView.findViewById(R.id.ivMenuName);
 			

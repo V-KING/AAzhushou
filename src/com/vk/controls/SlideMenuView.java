@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.vk.aazhushou.R;
+import com.vk.adapter.AdapterSlideMenu;
 
 import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.Toast;
@@ -37,8 +41,11 @@ public class SlideMenuView {
 				.findViewById(R.id.includeBottom);
 	}
 
-	private void bindList() {
-
+	public void bindList() {
+		AdapterSlideMenu _AdapterSlideMenu = new AdapterSlideMenu(mActivity, mMenuList);
+		ListView _ListView = (ListView) mActivity.findViewById(R.id.lvSlideList);
+		_ListView.setAdapter(_AdapterSlideMenu);
+		_ListView.setOnItemClickListener(new OnSlideMenuItemClick());
 	}
 
 	private void initLiteners() {
@@ -70,12 +77,8 @@ public class SlideMenuView {
 		}
 	}
 
-	private void add(SlideMenuItem pSlideMenuItem) {
+	public void add(SlideMenuItem pSlideMenuItem) {
 		mMenuList.add(pSlideMenuItem);
-	}
-
-	private void onSlideMenuClick() {
-
 	}
 
 	private class OnSlideMenuClick implements OnClickListener {
@@ -86,4 +89,17 @@ public class SlideMenuView {
 			Toast.makeText(mActivity, "OnSlideMenuClick", 1).show();
 		}
 	}
+	
+	private class OnSlideMenuItemClick implements OnItemClickListener{
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position,
+				long id) {
+			Toast.makeText(mActivity, "ItemClick", 1).show();
+
+			
+		}
+	}
+	
+	
+	
 }

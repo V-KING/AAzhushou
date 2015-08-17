@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="SlideMenuActivityMain">
+        <item>软件帮助</item>
+        <item>关于软件</item>
+    </string-array>
+</resources>

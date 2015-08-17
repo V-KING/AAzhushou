@@ -12,6 +12,15 @@ aa助手
 
 - 要不要标题requestWindowFeature(Window.FEATURE_NO_TITLE);
 - 动态将其他id(比如图片id)的item加载到layMainBody的GridView中
+	- //找到lay_main.xml中layMainBody；然后再在layMainBody中添加一个GridView
+		LinearLayout _mainBody = (LinearLayout) findViewById(R.id.layMainBody);
+	-  //实例化成一个view，就是需要动态加入的GridView（main_body.xml）
+		View _view = LayoutInflater.from(this).inflate(pResId, null);
+		RelativeLayout.LayoutParams _layoutParams = new RelativeLayout.LayoutParams(
+				RelativeLayout.LayoutParams.FILL_PARENT,
+				RelativeLayout.LayoutParams.FILL_PARENT);
+	- //将视图gridview加载到布局中进来，带上实例(_view)和参数(_layoutParams)
+		_mainBody.addView(_view, _layoutParams);
 
 ##20150806
 ### 1. 将main_body.xml建立,里面有GridView
@@ -126,8 +135,11 @@ private void open() {
 	- 得到arrays.xml中的数组
 		- getResource().getStringArray(R.array.SlideMenuActivityMain);
 		- getResource().getStringArray(传进来的参数int);
-		
 	
+> **常见问题**：
+**type #0x12 is not valid**：引用资源id的时候引用错了,是layout的ID还是view的ID
+	
+
 
 
 
