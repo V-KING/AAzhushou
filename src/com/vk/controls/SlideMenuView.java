@@ -22,6 +22,7 @@ public class SlideMenuView {
 	private boolean misClosed;
 	private List mMenuList;
 	private RelativeLayout layBottomBox;
+	private OnSliderMenuLisener mOnSliderMenuLisener;
 
 	public SlideMenuView(Activity pActivity) {
 		mActivity = pActivity;
@@ -30,10 +31,15 @@ public class SlideMenuView {
 		initView();
 		initLiteners();
 	}
+	
+	public interface OnSliderMenuLisener{
+		public abstract void onSliderMenuItemClick(View pView, SlideMenuItem pSlideMenuItem);
+	}
 
 	private void initVariable() {
 		mMenuList = new ArrayList();
 		misClosed = true;
+		mOnSliderMenuLisener = (OnSliderMenuLisener) mActivity;
 	}
 
 	private void initView() {
@@ -92,10 +98,11 @@ public class SlideMenuView {
 	
 	private class OnSlideMenuItemClick implements OnItemClickListener{
 		@Override
-		public void onItemClick(AdapterView<?> parent, View view, int position,
+		public void onItemClick(AdapterView<?> pAdapterView , View pView, int position,
 				long id) {
-			Toast.makeText(mActivity, "ItemClick", 1).show();
-
+//			Toast.makeText(mActivity, "ItemClick", 1).show();
+			SlideMenuItem _SlideMenuItem = (SlideMenuItem) pAdapterView.getItemAtPosition(position);
+			mOnSliderMenuLisener.onSliderMenuItemClick(pView, _SlideMenuItem);
 			
 		}
 	}

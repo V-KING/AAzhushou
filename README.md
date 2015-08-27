@@ -139,6 +139,34 @@ private void open() {
 > **常见问题**：
 **type #0x12 is not valid**：引用资源id的时候引用错了,是layout的ID还是view的ID
 	
+##20150827
+####1. 发现我们SliderMenuView里面的item里的click可以被用到很多次，click后做不同的处理
+用接口来实现，类似于Activity 实现OnClickListener监听button的click，OnClickListener也是这么做的。
+
+```
+//在SliderMenuView里面
+private OnSliderMenuLisener mOnSliderMenuLisener;
+//at initValible()
+mOnSliderMenuLisener = (OnSliderMenuLisener) mActivity;
+public interface OnSliderMenuLisener{
+	public abstract void onSliderMenuItemClick(View pView, SlideMenuItem pSlideMenuItem);
+}
+//in click method
+mOnSliderMenuLisener.onSliderMenuItemClick(pView, _SlideMenuItem);
+```
+
+```
+public class ActivityMain extends ActivityFrame implements OnSliderMenuLisener{
+	//...
+	@Override
+	public void onSliderMenuItemClick(View pView, SlideMenuItem pSlideMenuItem) {
+		// TODO Auto-generated method stub
+		Toast.makeText(this, pSlideMenuItem.getTitle(), Toast.LENGTH_SHORT).show();
+	}
+}
+```
+这样我们就是想一个接口，被Activity实现，谁用谁实现，就可以像OnClickListener那样监听button一样。
+
 
 
 
