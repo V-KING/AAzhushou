@@ -11,16 +11,23 @@ aa助手
 ### 3. 实现AcitivityFrame类
 
 - 要不要标题requestWindowFeature(Window.FEATURE_NO_TITLE);
-- 动态将其他id(比如图片id)的item加载到layMainBody的GridView中
-	- //找到lay_main.xml中layMainBody；然后再在layMainBody中添加一个GridView
-		LinearLayout _mainBody = (LinearLayout) findViewById(R.id.layMainBody);
-	-  //实例化成一个view，就是需要动态加入的GridView（main_body.xml）
-		View _view = LayoutInflater.from(this).inflate(pResId, null);
-		RelativeLayout.LayoutParams _layoutParams = new RelativeLayout.LayoutParams(
-				RelativeLayout.LayoutParams.FILL_PARENT,
-				RelativeLayout.LayoutParams.FILL_PARENT);
-	- //将视图gridview加载到布局中进来，带上实例(_view)和参数(_layoutParams)
+- 动态将一个lay_main_body.xml(里面是包含GridView的)加到定义好的lay_main.xml（或main_activity.xml）中 
+	- //找到lay_main.xml中incLayMainBody；然后再在layMainBody中添加一个GridView
+	```java
+	LinearLayout _mainBody = (LinearLayout) findViewById(R.id.incLayMainBody);
+	```
+	-  //实例化成一个view，就是需要动态加入的GridView（main_body.xml） 
+	```java
+	View _view = LayoutInflater.from(this).inflate(pResId, null);
+	RelativeLayout.LayoutParams _layoutParams = new RelativeLayout.LayoutParams(
+			RelativeLayout.LayoutParams.FILL_PARENT,
+			RelativeLayout.LayoutParams.FILL_PARENT);
+	```
+
+	- //将视图gridview加载到布局中进来，带上实例(_view)和参数(_layoutParams)，_layoutParams是可以不要的
+	```java
 		_mainBody.addView(_view, _layoutParams);
+	```
 
 ##20150806
 ### 1. 将main_body.xml建立,里面有GridView
@@ -35,6 +42,7 @@ aa助手
 思路：如果没有convertView就创建一组view（iv和tv），有就直接获得<组items>并设置资源.
 可以参考：http://www.cnblogs.com/andriod-html5/archive/2012/06/06/2539221.html
 - 重点复写getView(int position, View convertView, ViewGroup parent)方法
+	- 
 - 怎么获取(过滤)一个layout或者View? 
 	- LayoutInflater _layoutInflater = LayoutInflater.from(mContext);
 	- convertView = _layoutInflater .inflate(R.layout.main_body_item, null);
@@ -62,7 +70,7 @@ aa助手
 		android:state_pressed = "true"
 		android:drawable = "@drawable/pic2.pgn" />	
 ```
-1. 选择器设置如下：
+1. 选择器设置如下（一般放在drawable目录中）：
 ```
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:state_pressed="true">
@@ -96,7 +104,7 @@ open();
 close();
 toggle();
 add();
-bindList();
+bindList();//设置adapter和Listener
 onSlideMenuClick();
 构造函数
 isClosed;
@@ -119,7 +127,7 @@ private void open() {
 发现好adapter的东西重复了,所以新建一个AdapterBase类继承BaseAdapter，发现我们的getView不能实现，所以将AdapterBase变成抽象类.让AdapterSlideMenu继承AdapterBase。
 
 
-- 抽象类：谁继承我谁去实现方法
+- 抽象类：谁继承我谁去实现方法getView()
 - 再写AdapterSlideMenu时,新建slidemenu_list_item.xml让AdapterSlideMenu去加载slidemenu_list_item.xml里面的textview里的string
 - 菜单被用到很多次，跟业务联系紧密，所以在ActivityFram中封装CreateSlideMenu()
 	- 新建SlideMenuView控件。(里面有视图，有监听器等和SlideMenuView有关的东西)
@@ -166,6 +174,7 @@ public class ActivityMain extends ActivityFrame implements OnSliderMenuLisener{
 }
 ```
 这样我们就是想一个接口，被Activity实现，谁用谁实现，就可以像OnClickListener那样监听button一样。
+
 
 
 

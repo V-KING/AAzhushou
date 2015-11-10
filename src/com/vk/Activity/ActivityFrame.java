@@ -29,15 +29,16 @@ public class ActivityFrame extends ActivityBase {
 	 */
 	protected void appendMainBody(int pResId) {
 		// 找到lay_main.xml中layMainBody；然后再在layMainBody中添加一个GridView
-		LinearLayout _mainBody = (LinearLayout) findViewById(R.id.layMainBody);
+		LinearLayout _mainBody = (LinearLayout) findViewById(R.id.incLayMainBody);
 		// 实例化成一个view
 		View _view = LayoutInflater.from(this).inflate(pResId, null);
 		// 得到RelativeLayout的参数(宽高)
-		RelativeLayout.LayoutParams _layoutParams = new RelativeLayout.LayoutParams(
-				RelativeLayout.LayoutParams.FILL_PARENT,
-				RelativeLayout.LayoutParams.FILL_PARENT);
-		// 将视图加载进来，带上实例(_view)和参数(_layoutParams)
-		_mainBody.addView(_view, _layoutParams);
+//		RelativeLayout.LayoutParams _layoutParams = new RelativeLayout.LayoutParams(
+//				RelativeLayout.LayoutParams.FILL_PARENT,
+//				RelativeLayout.LayoutParams.FILL_PARENT);
+//		// 将视图加载进来，带上实例(_view)和参数(_layoutParams)
+//		_mainBody.addView(_view, _layoutParams);
+		_mainBody.addView(_view);
 	}
 
 	protected void createSlideMenu(int pResId) {

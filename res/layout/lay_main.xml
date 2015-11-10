@@ -15,7 +15,7 @@
         layout="@layout/bottom_box" />
     
     <LinearLayout
-        android:id="@+id/layMainBody"
+        android:id="@+id/incLayMainBody"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:layout_below="@id/includeTittle"
